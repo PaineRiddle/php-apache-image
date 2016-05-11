@@ -2,6 +2,8 @@
 /**
   * wechat php test
   */
+echo "Is A Test";  
+
 $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
 
 if(!empty($postStr)){
