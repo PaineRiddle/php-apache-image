@@ -7,6 +7,7 @@
 define("TOKEN", "weixin");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
+echo "OK";
 
 class wechatCallbackapiTest
 {
@@ -35,15 +36,14 @@ class wechatCallbackapiTest
                 $keyword = trim($postObj->Content);
                 $time = time();
                 $textTpl = "<xml>
-							<ToUserName><![CDATA[%s]]></ToUserName>
-							<FromUserName><![CDATA[%s]]></FromUserName>
-							<CreateTime>%s</CreateTime>
-							<MsgType><![CDATA[%s]]></MsgType>
-							<Content><![CDATA[%s]]></Content>
-							<FuncFlag>0</FuncFlag>
-							</xml>";             
-				if(!empty( $keyword ))
-                {
+				<ToUserName><![CDATA[%s]]></ToUserName>
+				<FromUserName><![CDATA[%s]]></FromUserName>
+				<CreateTime>%s</CreateTime>
+				<MsgType><![CDATA[%s]]></MsgType>
+				<Content><![CDATA[%s]]></Content>
+				<FuncFlag>0</FuncFlag>
+			    </xml>";             
+		if(!empty( $keyword )){
               		$msgType = "text";
                 	$contentStr = "Welcome to wechat world!";
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
@@ -53,7 +53,7 @@ class wechatCallbackapiTest
                 }
 
         }else {
-        	echo "";
+        	echo "no posted";
         	exit;
         }
     }
