@@ -7,7 +7,12 @@
 define("TOKEN", "weixin");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
-echo "OK";
+$con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
+if(!$con){
+	echo "connect OK";	
+}else{
+	echo "connect Faile";
+}
 
 class wechatCallbackapiTest
 {
@@ -54,7 +59,6 @@ class wechatCallbackapiTest
 
         }else {
         	echo "no posted";
-        	exit;
         }
     }
 		
