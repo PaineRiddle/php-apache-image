@@ -9,9 +9,14 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 $con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
 if(!$con){
-	echo "connect OK";	
+	echo "connect Faile";	
 }else{
-	echo "connect Faile";
+	mysql_select_db("iwA4hU7YxaQfjb6n", $con);
+	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
+	while($row = mysql_fetch_array($result)){
+		echo $row['ID'] . " " . $row['NUM'];
+	}
+	mysql_close($con);
 }
 
 class wechatCallbackapiTest
@@ -58,7 +63,7 @@ class wechatCallbackapiTest
                 }
 
         }else {
-        	echo "no posted";
+        	echo "no posted\n";
         }
     }
 		
