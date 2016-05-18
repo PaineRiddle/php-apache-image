@@ -7,7 +7,7 @@
 define("TOKEN", "weixin");
 //$wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-set_time_limit(0);
+//set_time_limit(0);
 $i=0;
 $con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
 if(!$con){
@@ -20,7 +20,7 @@ while(i<30){
 	//$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	//$row = mysql_fetch_array($result);
 	echo i;
-	sleep(1);
+	//sleep(1);
 	i++;
 }
 
