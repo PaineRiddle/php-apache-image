@@ -19,6 +19,13 @@ if(!$con){
 	//mysql_close($con);
 }
 
+while(1){
+	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
+	$row = mysql_fetch_array($result);
+	echo $row['NUM'];
+	sleep(1);
+}
+
 class wechatCallbackapiTest
 {
 	public function valid()
