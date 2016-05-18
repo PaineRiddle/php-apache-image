@@ -6,6 +6,6 @@
   }else{
 	  mysql_select_db("iwA4hU7YxaQfjb6n", $con);
 	}
-	mysql_query("UPDATE  mydb SET TRUE='1' WHERE ID=1");
+	mysql_query("UPDATE  mydb SET TRUE=1 WHERE ID=1");
 	mysql_close($con);
 ?>
