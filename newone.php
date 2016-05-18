@@ -5,7 +5,8 @@
 	  echo "connect Faile";	
   }else{
 	  mysql_select_db("iwA4hU7YxaQfjb6n", $con);
+	  echo "connect OK";
 	}
-	mysql_query("UPDATE  mydb SET TRUE=1 WHERE ID=1");
+	if(mysql_query("UPDATE  mydb SET TRUE=1 WHERE ID=1")) echo"UPDATE";
 	mysql_close($con);
 ?>
