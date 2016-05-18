@@ -7,21 +7,21 @@
 define("TOKEN", "weixin");
 //$wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-//set_time_limit(0);
+set_time_limit(0);
 $i=0;
-//$con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
-//if(!$con){
-//	echo "connect Faile";	
-//}else{
-	//mysql_select_db("iwA4hU7YxaQfjb6n", $con);
-	//}
-	//mysql_close($con);
+$con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
+if(!$con){
+	echo "connect Faile";	
+}else{
+	mysql_select_db("iwA4hU7YxaQfjb6n", $con);
+	}
+	mysql_close($con);
 echo "how does it work????";
 while($i<30){
-	//$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
-	//$row = mysql_fetch_array($result);
-	echo "!!!";
-	//sleep(1);
+	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
+	$row = mysql_fetch_array($result);
+	echo "$row['NUM']";
+	sleep(1);
 	$i++;
 }
 
