@@ -16,13 +16,13 @@ define("TOKEN", "weixin");
 	//mysql_select_db("iwA4hU7YxaQfjb6n", $con);
 	//}
 	//mysql_close($con);
-echo "how does it work????"
+echo "how does it work????";
 //while(i<30){
 	//$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	//$row = mysql_fetch_array($result);
 	echo "!!!";
 	//sleep(1);
-	i++;
+	//i++;
 //}
 
 class wechatCallbackapiTest
