@@ -15,12 +15,12 @@ if(!$con){
 }else{
 	mysql_select_db("iwA4hU7YxaQfjb6n", $con);
 	}
-	mysql_close($con);
+	//mysql_close($con);
 echo "how does it work????";
 while($i<30){
 	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	$row = mysql_fetch_array($result);
-	echo "$row['NUM']";
+	echo $row['NUM'];
 	sleep(1);
 	$i++;
 }
