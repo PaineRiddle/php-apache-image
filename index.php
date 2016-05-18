@@ -5,8 +5,8 @@
 
 //define your token
 define("TOKEN", "weixin");
-$wechatObj = new wechatCallbackapiTest();
-$wechatObj->valid();
+//$wechatObj = new wechatCallbackapiTest();
+//$wechatObj->valid();
 $con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
 if(!$con){
 	echo "connect Faile";	
@@ -16,7 +16,7 @@ if(!$con){
 	while($row = mysql_fetch_array($result)){
 		echo $row['ID'] . " " . $row['NUM'];
 	}
-	mysql_close($con);
+	//mysql_close($con);
 }
 
 class wechatCallbackapiTest
