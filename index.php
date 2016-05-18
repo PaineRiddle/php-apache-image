@@ -17,12 +17,12 @@ if(!$con){
 	//mysql_query("UPDATE `mydb` SET `ID`=1,`NUM`=2,`KEY`=3,`TRUE`=1 WHERE `ID`=1");
 	}
 	//mysql_close($con);
-//echo "how does it work????";
+echo "how does it work????";
 while($i<30){
 	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	$row = mysql_fetch_array($result);
-	if($row['TRUE']==0) {
-		echo"OK"
+	if($row['TRUE']==1) {
+		echo "OK";
 		exit;
 	}
 	sleep(1);
