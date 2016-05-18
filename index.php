@@ -17,9 +17,9 @@ if(!$con){
 	}
 	//mysql_close($con);
 while(i<30){
-	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
-	$row = mysql_fetch_array($result);
-	echo $row['NUM'];
+	//$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
+	//$row = mysql_fetch_array($result);
+	echo i;
 	sleep(1);
 	i++;
 }
