@@ -7,24 +7,27 @@
 define("TOKEN", "weixin");
 //$wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-//set_time_limit(0);
-//$i=0;
+set_time_limit(0);
+$i=0;
 $con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
 if(!$con){
 	echo "connect Faile";	
 }else{
 	mysql_select_db("iwA4hU7YxaQfjb6n", $con);
-	mysql_query("UPDATE `mydb` SET `ID`=1,`NUM`=2,`KEY`=3,`TRUE`=1 WHERE `ID`=1");
+	//mysql_query("UPDATE `mydb` SET `ID`=1,`NUM`=2,`KEY`=3,`TRUE`=1 WHERE `ID`=1");
 	}
-	mysql_close($con);
+	//mysql_close($con);
 //echo "how does it work????";
-//while($i<30){
-//	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
-//	$row = mysql_fetch_array($result);
-//	if($row['TRUE']==1) echo"OK";
-//	sleep(1);
-//	$i++;
-//}
+while($i<30){
+	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
+	$row = mysql_fetch_array($result);
+	if($row['TRUE']==0) {
+		echo"OK"
+		exit;
+	}
+	sleep(1);
+	$i++;
+}
 
 class wechatCallbackapiTest
 {
