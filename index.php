@@ -16,12 +16,13 @@ if(!$con){
 	mysql_select_db("iwA4hU7YxaQfjb6n", $con);
 	}
 	//mysql_close($con);
-while(i<30){
+while(true){
 	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	$row = mysql_fetch_array($result);
 	echo $row['NUM'];
 	sleep(1);
 	i++;
+	if(i>30) exit;
 }
 
 class wechatCallbackapiTest
