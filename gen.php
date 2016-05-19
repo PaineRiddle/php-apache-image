@@ -5,7 +5,7 @@
   $con = mysql_connect("10.10.26.58:3306","uoQqLyRr7lktUgwM","pSocJ34VnBzQOFgHW");
   if(!$con) echo "connect Faile";
   mysql_select_db("iwA4hU7YxaQfjb6n", $con);
-  mysql_query("UPDATE `mydb` SET `KEY`='{$key}' WHERE `ID`=1");
+  mysql_query("UPDATE `mydb` SET `KEY`='{$key}' WHERE `NUM`='{$num}'");
   mysql_close($con);
   echo $url;
 ?>
