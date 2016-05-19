@@ -8,7 +8,7 @@ if(!empty($key)){
 	$result = mysql_query("SELECT * FROM mydb WHERE `NUM`='{$num}'");
 	$row = mysql_fetch_array($result);
 	if($row['KEY']==$key) {
-		mysql_query("UPDATE `mydb` SET `KEY`=0 `TRUE`=1 WHERE `NUM`='{$num}'");
+		mysql_query("UPDATE `mydb` SET `KEY`=0,`TRUE`=1 WHERE `NUM`='{$num}'");
 		echo "login success";
 	}else{
 		echo "wrong key";
