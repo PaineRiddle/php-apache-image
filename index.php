@@ -21,7 +21,7 @@ while($i<30){
 	$result = mysql_query("SELECT * FROM mydb WHERE ID=1");
 	$row = mysql_fetch_array($result);
 	if($row['TRUE']==1) {
-		echo "OK";
+		echo "ZY";
 		exit;
 	}
 	sleep(1);
